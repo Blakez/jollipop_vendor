@@ -25,12 +25,103 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/jollipop/overlays/common
 
-# Needed Packages
-PRODUCT_PACKAGES += Launcher3
-
-# Proprietary latinime lib needed for swyping
+#Add in Google Apps
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+	$(LOCAL_PATH)/app/Calendar/Calendar.apk:system/app/Calendar/Calendar.apk \
+	$(LOCAL_PATH)/app/Chrome/Chrome.apk:system/app/Chrome/Chrome.apk \
+	$(LOCAL_PATH)/app/CloudPrint2/CloudPrint2.apk:system/app/CloudPrint2/CloudPrint2.apk \
+	$(LOCAL_PATH)/app/ConfigUpdater/ConfigUpdater.apk:system/app/ConfigUpdater/ConfigUpdater.apk \
+	$(LOCAL_PATH)/app/Gmail2/Gmail2.apk:system/app/Gmail2/Gmail2.apk \
+	$(LOCAL_PATH)/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk \
+	$(LOCAL_PATH)/app/GoogleCamera/GoogleCamera.apk:system/app/GoogleCamera/GoogleCamera.apk \
+	$(LOCAL_PATH)/app/GoogleCamera/arm/GoogleCamera.odex:system/app/GoogleCamera/arm/GoogleCamera.odex \
+	$(LOCAL_PATH)/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk \
+	$(LOCAL_PATH)/app/GoogleHome/GoogleHome.apk:system/app/GoogleHome/GoogleHome.apk \
+	$(LOCAL_PATH)/app/GoogleTTS/GoogleTTS.apk:system/app/GoogleTTS/GoogleTTS.apk \
+	$(LOCAL_PATH)/app/GoogleTTS/lib/arm/libpatts_engine_jni_api.so:system/app/GoogleTTS/lib/arm/libpatts_engine_jni_api.so \
+	$(LOCAL_PATH)/app/GoogleTTS/lib/arm/libspeexwrapper.so:system/app/GoogleTTS/lib/arm/libspeexwrapper.so \
+	$(LOCAL_PATH)/app/LatinImeGoogle/LatinImeGoogle.apk:system/app/LatinImeGoogle/LatinImeGoogle.apk \
+	$(LOCAL_PATH)/app/LatinImeGoogle/arm/LatinImeGoogle.odex:system/app/LatinImeGoogle/arm/LatinImeGoogle.odex \
+	$(LOCAL_PATH)/app/Maps/Maps.apk:system/app/Maps/Maps.apk \
+	$(LOCAL_PATH)/app/Maps/lib/arm/libcrashreporter.so:system/app/Maps/lib/arm/libcrashreporter.so \
+	$(LOCAL_PATH)/app/Maps/lib/arm/libgmm-jni.so:system/app/Maps/lib/arm/libgmm-jni.so \
+	$(LOCAL_PATH)/app/Music2/Music2.apk:system/app/Music2/Music2.apk \
+	$(LOCAL_PATH)/app/Photos/Photos.apk:system/app/Photos/Photos.apk \
+	$(LOCAL_PATH)/app/Keep/Keep.apk:system/app/Keep/Keep.apk \
+	$(LOCAL_PATH)/app/Street/Street.apk:system/app/Street/Street.apk \
+	$(LOCAL_PATH)/app/Videos/Videos.apk:system/app/Videos/Videos.apk \
+	$(LOCAL_PATH)/app/Videos/lib/arm/libWVphoneAPI.so:system/app/Videos/lib/arm/libWVphoneAPI.so \
+	$(LOCAL_PATH)/app/YouTube/YouTube.apk:system/app/YouTube/YouTube.apk \
+	$(LOCAL_PATH)/app/YouTube/lib/arm/libcronet.so:system/app/YouTube/lib/arm/libcronet.so \
+	$(LOCAL_PATH)/app/YouTube/lib/arm/libm2ts_player.so:system/app/YouTube/lib/arm/libm2ts_player.so \
+	
+	$(LOCAL_PATH)/etc/g.prop:system/etc/g.prop \
+	$(LOCAL_PATH)/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
+	$(LOCAL_PATH)/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
+	$(LOCAL_PATH)/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
+	
+	$(LOCAL_PATH)/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
+	$(LOCAL_PATH)/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
+	$(LOCAL_PATH)/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
+	
+	$(LOCAL_PATH)/lib/libfilterpack_facedetect.so:system/lib/libfilterpack_facedetect.so \
+	$(LOCAL_PATH)/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+	$(LOCAL_PATH)/lib/liblightcycle.so:system/lib/liblightcycle.so \
+	
+	$(LOCAL_PATH)/priv-app/GmsCore/GmsCore.apk:system/priv-app/GmsCore/GmsCore.apk \
+	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libAppDataSearch.so:system/priv-app/GmsCore/lib/arm/libAppDataSearch.so \
+	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libconscrypt_gmscore_jni.so:system/priv-app/GmsCore/lib/arm/libconscrypt_gmscore_jni.so \
+	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libgames_rtmp_jni.so:system/priv-app/GmsCore/lib/arm/libgames_rtmp_jni.so \
+	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libgcastv2_base.so:system/priv-app/GmsCore/lib/arm/libgcastv2_base.so \
+	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libgcastv2_support.so:system/priv-app/GmsCore/lib/arm/libgcastv2_support.so \
+	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libgms-ocrclient.so:system/priv-app/GmsCore/lib/arm/libgms-ocrclient.so \
+	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libgmscore.so:system/priv-app/GmsCore/lib/arm/libgmscore.so \
+	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libjgcastservice.so:system/priv-app/GmsCore/lib/arm/libjgcastservice.so \
+	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libWhisper.so:system/priv-app/GmsCore/lib/arm/libWhisper.so \
+	$(LOCAL_PATH)/priv-app/GoogleBackupTransport/GoogleBackupTransport.apk:system/priv-app/GoogleBackupTransport/GoogleBackupTransport.apk \
+	$(LOCAL_PATH)/priv-app/GoogleFeedback/GoogleFeedback.apk:system/priv-app/GoogleFeedback/GoogleFeedback.apk \
+	$(LOCAL_PATH)/priv-app/GoogleLoginService/GoogleLoginService.apk:system/priv-app/GoogleLoginService/GoogleLoginService.apk \
+	$(LOCAL_PATH)/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk:system/priv-app/GoogleOneTimeInitializer/GoogleOneTimeInitializer.apk \
+	$(LOCAL_PATH)/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk:system/priv-app/GooglePartnerSetup/GooglePartnerSetup.apk \
+	$(LOCAL_PATH)/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk:system/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk \
+	$(LOCAL_PATH)/priv-app/Messenger/Messenger.apk:system/priv-app/Messenger/Messenger.apk \
+	$(LOCAL_PATH)/priv-app/Phonesky/Phonesky.apk:system/priv-app/Phonesky/Phonesky.apk \
+	$(LOCAL_PATH)/priv-app/SetupWizard/SetupWizard.apk:system/priv-app/SetupWizard/SetupWizard.apk \
+	$(LOCAL_PATH)/priv-app/talkback/talkback.apk:system/priv-app/talkback/talkback.apk \
+	$(LOCAL_PATH)/priv-app/Velvet/Velvet.apk:system/priv-app/Velvet/Velvet.apk \
+	$(LOCAL_PATH)/priv-app/Velvet/lib/arm/libgoogle_hotword_jni.so:system/priv-app/Velvet/lib/arm/libgoogle_hotword_jni.so \
+	$(LOCAL_PATH)/priv-app/Velvet/lib/arm/libgoogle_recognizer_jni_l.so:system/priv-app/Velvet/lib/arm/libgoogle_recognizer_jni_l.so \
+	$(LOCAL_PATH)/priv-app/Velvet/lib/arm/libvcdecoder_jni.so:system/priv-app/Velvet/lib/arm/libvcdecoder_jni.so \
+	
+	$(LOCAL_PATH)/usr/srec/en-US/c_fst:system/usr/srec/en-US/c_fst \
+	$(LOCAL_PATH)/usr/srec/en-US/clg:system/usr/srec/en-US/clg \
+	$(LOCAL_PATH)/usr/srec/en-US/commands.abnf:system/usr/srec/en-US/commands.abnf \
+	$(LOCAL_PATH)/usr/srec/en-US/compile_grammar.config:system/usr/srec/en-US/compile_grammar.config \
+	$(LOCAL_PATH)/usr/srec/en-US/contacts.abnf:system/usr/srec/en-US/contacts.abnf \
+	$(LOCAL_PATH)/usr/srec/en-US/dict:system/usr/srec/en-US/dict \
+	$(LOCAL_PATH)/usr/srec/en-US/dictation.config:system/usr/srec/en-US/dictation.config \
+	$(LOCAL_PATH)/usr/srec/en-US/dnn:system/usr/srec/en-US/dnn \
+	$(LOCAL_PATH)/usr/srec/en-US/endpointer_dictation.config:system/usr/srec/en-USendpointer_dictation.config/ \
+	$(LOCAL_PATH)/usr/srec/en-US/endpointer_voicesearch.config:system/usr/srec/en-US/endpointer_voicesearch.config \
+	$(LOCAL_PATH)/usr/srec/en-US/ep_acoustic_model:system/usr/srec/en-US/ep_acoustic_model \
+	$(LOCAL_PATH)/usr/srec/en-US/g2p_fst:system/usr/srec/en-US/g2p_fst \
+	$(LOCAL_PATH)/usr/srec/en-US/grammar.config:system/usr/srec/en-US/grammar.config \
+	$(LOCAL_PATH)/usr/srec/en-US/hclg_shotword:system/usr/srec/en-US/hclg_shotword \
+	$(LOCAL_PATH)/usr/srec/en-US/hmm_symbols:system/usr/srec/en-US/hmm_symbols \
+	$(LOCAL_PATH)/usr/srec/en-US/hmmlist:system/usr/srec/en-US/hmmlist \
+	$(LOCAL_PATH)/usr/srec/en-US/hotword_classifier:system/usr/srec/en-US/hotword_classifier \
+	$(LOCAL_PATH)/usr/srec/en-US/hotword_normalizer:system/usr/srec/en-US/hotword_normalizer \
+	$(LOCAL_PATH)/usr/srec/en-US/hotword_prompt.txt:system/usr/srec/en-US/hotword_prompt.txt \
+	$(LOCAL_PATH)/usr/srec/en-US/hotword_word_symbols:system/usr/srec/en-US/hotword_word_symbols \
+	$(LOCAL_PATH)/usr/srec/en-US/hotword.config:system/usr/srec/en-US/hotword.config \
+	$(LOCAL_PATH)/usr/srec/en-US/metadata:system/usr/srec/en-US/metadata \
+	$(LOCAL_PATH)/usr/srec/en-US/norm_fst:system/usr/srec/en-US/norm_fst \
+	$(LOCAL_PATH)/usr/srec/en-US/normalizer:system/usr/srec/en-US/normalizer \
+	$(LOCAL_PATH)/usr/srec/en-US/offensive_word_normalizer:system/usr/srec/en-US/offensive_word_normalizer \
+	$(LOCAL_PATH)/usr/srec/en-US/phone_state_map:system/usr/srec/en-US/phone_state_map \
+	$(LOCAL_PATH)/usr/srec/en-US/phonelist:system/usr/srec/en-US/phonelist \
+	$(LOCAL_PATH)/usr/srec/en-US/rescoring_lm:system/usr/srec/en-US/rescoring_lm \
+	$(LOCAL_PATH)/usr/srec/en-US/wordlist:system/usr/srec/en-US/wordlist
 
 # Enable sip+voip on all targets
 PRODUCT_COPY_FILES += \
