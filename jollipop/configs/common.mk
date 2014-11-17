@@ -25,49 +25,84 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/jollipop/overlays/common
 
-#Add in Google Apps
+#####Add in Google Apps#####
+
+# Add /app
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/app/Calendar/Calendar.apk:system/app/Calendar/Calendar.apk \
 	$(LOCAL_PATH)/app/Chrome/Chrome.apk:system/app/Chrome/Chrome.apk \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchrome.1847.114.so:system/app/Chrome/lib/arm/libchrome.1847.114.so \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchrome.1916.122.so:system/app/Chrome/lib/arm/libchrome.1916.122.so \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchrome.1916.138.so:system/app/Chrome/lib/arm/libchrome.1916.138.so \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchrome.1916.141.so:system/app/Chrome/lib/arm/libchrome.1916.141.so \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchrome.1985.122.so:system/app/Chrome/lib/arm/libchrome.1985.122.so \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchrome.1985.128.so:system/app/Chrome/lib/arm/libchrome.1985.128.so \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchrome.1985.131.so:system/app/Chrome/lib/arm/libchrome.1985.131.so \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchrome.1985.135.so:system/app/Chrome/lib/arm/libchrome.1985.135.so \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchrome.2062.117.so:system/app/Chrome/lib/arm/libchrome.2062.117.so \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchrome.2125.114.so:system/app/Chrome/lib/arm/libchrome.2125.114.so \
+	$(LOCAL_PATH)/app/Chrome/lib/arm/libchromium_android_linker.so:system/app/Chrome/lib/arm/libchromium_android_linker.so \
 	$(LOCAL_PATH)/app/CloudPrint2/CloudPrint2.apk:system/app/CloudPrint2/CloudPrint2.apk \
 	$(LOCAL_PATH)/app/ConfigUpdater/ConfigUpdater.apk:system/app/ConfigUpdater/ConfigUpdater.apk \
+	$(LOCAL_PATH)/app/Exchange3/Exchange3.apk:system/app/Exchange3/Exchange3.apk \
 	$(LOCAL_PATH)/app/Gmail2/Gmail2.apk:system/app/Gmail2/Gmail2.apk \
 	$(LOCAL_PATH)/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter/GoogleCalendarSyncAdapter.apk \
 	$(LOCAL_PATH)/app/GoogleCamera/GoogleCamera.apk:system/app/GoogleCamera/GoogleCamera.apk \
-	$(LOCAL_PATH)/app/GoogleCamera/arm/GoogleCamera.odex:system/app/GoogleCamera/arm/GoogleCamera.odex \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/libgcam.so:system/app/GoogleCamera/lib/arm/libgcam.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/libgcam_swig_jni.so:system/app/GoogleCamera/lib/arm/libgcam_swig_jni.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/libjni_jpegutil.so:system/app/GoogleCamera/lib/arm/libjni_jpegutil.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/libjni_tinyplanet.so:system/app/GoogleCamera/lib/arm/libjni_tinyplanet.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/libjpeg.so:system/app/GoogleCamera/lib/arm/libjpeg.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/liblightcycle.so:system/app/GoogleCamera/lib/arm/liblightcycle.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/libnativehelper_compat_libc++.so:system/app/GoogleCamera/lib/arm/libnativehelper_compat_libc++.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/librefocus.so:system/app/GoogleCamera/lib/arm/librefocus.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/librs.layered_filter_f32.so:system/app/GoogleCamera/lib/arm/librs.layered_filter_f32.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/librs.layered_filter_fast_f32.so:system/app/GoogleCamera/lib/arm/librs.layered_filter_fast_f32.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/librsjni.so:system/app/GoogleCamera/lib/arm/librsjni.so \
+	$(LOCAL_PATH)/app/GoogleCamera/lib/arm/libRSSupport.so:system/app/GoogleCamera/lib/arm/libRSSupport.so \
 	$(LOCAL_PATH)/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter/GoogleContactsSyncAdapter.apk \
 	$(LOCAL_PATH)/app/GoogleHome/GoogleHome.apk:system/app/GoogleHome/GoogleHome.apk \
 	$(LOCAL_PATH)/app/GoogleTTS/GoogleTTS.apk:system/app/GoogleTTS/GoogleTTS.apk \
 	$(LOCAL_PATH)/app/GoogleTTS/lib/arm/libpatts_engine_jni_api.so:system/app/GoogleTTS/lib/arm/libpatts_engine_jni_api.so \
 	$(LOCAL_PATH)/app/GoogleTTS/lib/arm/libspeexwrapper.so:system/app/GoogleTTS/lib/arm/libspeexwrapper.so \
 	$(LOCAL_PATH)/app/LatinImeGoogle/LatinImeGoogle.apk:system/app/LatinImeGoogle/LatinImeGoogle.apk \
-	$(LOCAL_PATH)/app/LatinImeGoogle/arm/LatinImeGoogle.odex:system/app/LatinImeGoogle/arm/LatinImeGoogle.odex \
 	$(LOCAL_PATH)/app/Maps/Maps.apk:system/app/Maps/Maps.apk \
 	$(LOCAL_PATH)/app/Maps/lib/arm/libcrashreporter.so:system/app/Maps/lib/arm/libcrashreporter.so \
 	$(LOCAL_PATH)/app/Maps/lib/arm/libgmm-jni.so:system/app/Maps/lib/arm/libgmm-jni.so \
 	$(LOCAL_PATH)/app/Music2/Music2.apk:system/app/Music2/Music2.apk \
-	$(LOCAL_PATH)/app/Photos/Photos.apk:system/app/Photos/Photos.apk \
+	$(LOCAL_PATH)/app/PlusOne/PlusOne.apk:system/app/PlusOne/PlusOne.apk \
+	$(LOCAL_PATH)/app/PlusOne/lib/arm/libcrashreporter.so:system/app/PlusOne/lib/arm/libcrashreporter.so \
+	$(LOCAL_PATH)/app/PlusOne/lib/arm/libcronet.so:system/app/PlusOne/lib/arm/libcronet.so \
+	$(LOCAL_PATH)/app/PlusOne/lib/arm/libfilterframework_jni.so:system/app/PlusOne/lib/arm/libfilterframework_jni.so \
+	$(LOCAL_PATH)/app/PlusOne/lib/arm/libmoviemaker-jni.so:system/app/PlusOne/lib/arm/libmoviemaker-jni.so \
+	$(LOCAL_PATH)/app/PlusOne/lib/arm/libphotoeditor_native.so:system/app/PlusOne/lib/arm/libphotoeditor_native.so \
+	$(LOCAL_PATH)/app/PlusOne/lib/arm/libwebp_android.so:system/app/PlusOne/lib/arm/libwebp_android.so \
 	$(LOCAL_PATH)/app/Keep/Keep.apk:system/app/Keep/Keep.apk \
 	$(LOCAL_PATH)/app/Street/Street.apk:system/app/Street/Street.apk \
-	$(LOCAL_PATH)/app/Videos/Videos.apk:system/app/Videos/Videos.apk \
-	$(LOCAL_PATH)/app/Videos/lib/arm/libWVphoneAPI.so:system/app/Videos/lib/arm/libWVphoneAPI.so \
 	$(LOCAL_PATH)/app/YouTube/YouTube.apk:system/app/YouTube/YouTube.apk \
 	$(LOCAL_PATH)/app/YouTube/lib/arm/libcronet.so:system/app/YouTube/lib/arm/libcronet.so \
-	$(LOCAL_PATH)/app/YouTube/lib/arm/libm2ts_player.so:system/app/YouTube/lib/arm/libm2ts_player.so \
-	
+	$(LOCAL_PATH)/app/YouTube/lib/arm/libm2ts_player.so:system/app/YouTube/lib/arm/libm2ts_player.so
+
+# Add /etc
+PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/etc/g.prop:system/etc/g.prop \
 	$(LOCAL_PATH)/etc/permissions/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
 	$(LOCAL_PATH)/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
-	$(LOCAL_PATH)/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
-	
+	$(LOCAL_PATH)/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml
+
+# Add /framework
+PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/framework/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
 	$(LOCAL_PATH)/framework/com.google.android.media.effects.jar:system/framework/com.google.android.media.effects.jar \
-	$(LOCAL_PATH)/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
-	
+	$(LOCAL_PATH)/framework/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar
+
+# Add /lib
+PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/lib/libfilterpack_facedetect.so:system/lib/libfilterpack_facedetect.so \
-	$(LOCAL_PATH)/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
-	$(LOCAL_PATH)/lib/liblightcycle.so:system/lib/liblightcycle.so \
-	
+	$(LOCAL_PATH)/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
+# Add /priv-app
+PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/priv-app/GmsCore/GmsCore.apk:system/priv-app/GmsCore/GmsCore.apk \
 	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libAppDataSearch.so:system/priv-app/GmsCore/lib/arm/libAppDataSearch.so \
 	$(LOCAL_PATH)/priv-app/GmsCore/lib/arm/libconscrypt_gmscore_jni.so:system/priv-app/GmsCore/lib/arm/libconscrypt_gmscore_jni.so \
@@ -91,8 +126,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/priv-app/Velvet/Velvet.apk:system/priv-app/Velvet/Velvet.apk \
 	$(LOCAL_PATH)/priv-app/Velvet/lib/arm/libgoogle_hotword_jni.so:system/priv-app/Velvet/lib/arm/libgoogle_hotword_jni.so \
 	$(LOCAL_PATH)/priv-app/Velvet/lib/arm/libgoogle_recognizer_jni_l.so:system/priv-app/Velvet/lib/arm/libgoogle_recognizer_jni_l.so \
-	$(LOCAL_PATH)/priv-app/Velvet/lib/arm/libvcdecoder_jni.so:system/priv-app/Velvet/lib/arm/libvcdecoder_jni.so \
-	
+	$(LOCAL_PATH)/priv-app/Velvet/lib/arm/libvcdecoder_jni.so:system/priv-app/Velvet/lib/arm/libvcdecoder_jni.so
+
+# Add /usr
+PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/usr/srec/en-US/c_fst:system/usr/srec/en-US/c_fst \
 	$(LOCAL_PATH)/usr/srec/en-US/clg:system/usr/srec/en-US/clg \
 	$(LOCAL_PATH)/usr/srec/en-US/commands.abnf:system/usr/srec/en-US/commands.abnf \
