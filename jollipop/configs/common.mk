@@ -25,6 +25,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/jollipop/overlays/common
 
+# Embed SuperUser
+SUPERUSER_EMBEDDED := true
+
+# Required packages
+PRODUCT_PACKAGES += \
+    Superuser \
+    su
+
 #####Add in Google Apps#####
 
 # Add /app
